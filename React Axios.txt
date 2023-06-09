@@ -1,0 +1,48 @@
+function axiosTest() {
+        // create a promise for the axios request
+        const promise = axios.get("/api/rooms/getallrooms/")
+    
+        // using .then, create a new promise which extracts the data
+        const dataPromise = promise.then((response) => response.data)
+    
+        // return it
+        return dataPromise
+    }
+
+    axiosTest()
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.log(err))
+
+
+
+try {
+
+            const data = (await axios.get('/api/rooms/getallrooms')).data
+            console.log(data)
+        }
+
+        catch(error) {
+            console.log(error)
+        }
+
+        fetchData()
+      }
+
+
+
+
+
+
+  async function fetchData(){
+
+      try {
+        const data = (await axios.get('/api/rooms/getallrooms')).data
+        console.log(data)
+      }
+      
+      catch(error) {
+        console.log(error)
+      }
+    }    

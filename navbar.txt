@@ -1,0 +1,30 @@
+{user ? (<>
+                    <h1 style = {{color : 'white'}}>{user.name}</h1>
+                    </>) : (<>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/register">
+                                サインアップ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">
+                                ログイン
+                            </a>
+                        </li>
+                    </>)}
+
+
+,
+  "proxy": "http://localhost:5000/"
+
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = (app) => {
+	app.use(
+		'/api/*',
+		createProxyMiddleware({
+			target: 'http://localhost:5000',
+			changeOrigin: true,
+		})
+	);
+};

@@ -1,0 +1,2 @@
+if(!moment(moment(date[0]).format('DD-MM-YYYY')).isBetween(booking.fromdate, booking.todate)
+          && !moment(moment(date[1]).format('DD-MM-YYYY')).isBetween(booking.fromdate, booking.todate))
