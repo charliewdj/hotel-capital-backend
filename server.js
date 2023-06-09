@@ -14,7 +14,7 @@ app.use("/api/rooms", roomsRoute)
 app.use("/api/users", usersRoute)
 app.use("/api/bookings", bookingsRoute)
 app.use(cors({
-    origin: ["http://localhost:3000", "https://hotel-capital-frontend.vercel.app/"],
+    origin: ["http://localhost:3000", "https://hotel-capital-frontend.onrender.com"],
 }))
 app.get("/", (req, res) => {
     res.setHeader("Access-Control-Allow-Credentials", "true");
